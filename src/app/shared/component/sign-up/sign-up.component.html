@@ -1,1 +1,37 @@
-<p>sign-up works!</p>
+<form [formGroup]="signUpForm" (ngSubmit)="SignUp()">
+    <div class="mb-3">
+        <label for="id1" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="id1" formArrayName="fullName">
+
+    </div>
+    <div class="mb-3">
+        <label for="id2" class="form-label">Email Address</label>
+        <input type="text" class="form-control" id="id2" formControlName="emailAddress">
+    </div>
+
+    <label for="id3" class="form-label">Mobile Number</label>
+    <div class="input-group mb-3">
+
+        <input type="text" class="form-control" placeholder="Mobile number" formControlName="mobile">
+        <button class="btn btn-outline-warning" type="button" id="button-addon2" (click)="getOtp()">Get OTP</button>
+    </div>
+    <ng-container *ngIf="generateOtp">
+        <label for="id5" class="form-label">Enter OTP</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter OTP" formControlName="mobile">
+            <button class="btn btn-outline-warning" type="button" id="id5" (click)="verifyOtp()">Verify</button>
+        </div>
+        <label class="ms-4 mb-2 fw-semibold">OTP is valid for :</label>
+    </ng-container>
+    <div class="mb-3">
+        <label for="id4" class="form-label">Password</label>
+        <input type="text" class="form-control" id="id4" formControlName="password">
+    </div>
+
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button class="btn btn-primary ms-2" (click)="sign_up()">Sign-In</button>
+
+</form>

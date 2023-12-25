@@ -14,6 +14,7 @@ export class ProductByCategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCategory();
+    // this.getProductBycategory('ALL');
   }
   getCategory() {
     this.http.getDataFromServer('topcats').subscribe((res: any) => {
@@ -22,6 +23,7 @@ export class ProductByCategoryComponent implements OnInit {
         // this.categoryList = res;
         this.categoryList.unshift('ALL');
         console.log('get category', this.categoryList);
+        this.getProductBycategory('ALL');
       }
     });
   }
