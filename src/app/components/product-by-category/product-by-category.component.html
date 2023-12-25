@@ -1,0 +1,83 @@
+<div class="container">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../../assets/img/banner_big.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+                <img src="../../assets/img/banner2.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+                <img src="../../assets/img/banner3.jpg" class="d-block w-100" alt="..." />
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h6>Categories</h6>
+            <ul class="list-group mt-2 cursor" *ngFor="let category of categoryList; let i = index">
+                <li class="list-group-item" [ngClass]="category == selectedCategory ? 'active' : ''"
+                    (click)="getProductBycategory(category)">
+                    {{ category }}
+                </li>
+                <!-- <li class="list-group-item" *ngIf="i!=0" (click)="getProductBycategory(category)">{{category}}</li>  -->
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <div class="row mt-2 ">
+                <div class="col-md-4 mb-2" *ngFor="let data of productList">
+                    <div class="card shadow=sm mx-2" style="width: 15rem">
+                        <img [src]="data.p_img_url" class="card-img-top p-3" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title fs-6">{{ data.llc_n }}</h5>
+                            <div>
+                                <div class="dropdown m-1">
+                                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown">
+                                        {{ data.w }}-{{ data.sp }}
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li *ngFor="let item of data.all_prods">
+                                            <a class="dropdown-item">{{ item.w }}-{{ item.sp }}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>
+                                <span class="fs-13">MRP&nbsp;</span><span
+                                    class="fs-13 text-decoration-line-through">Rs&nbsp;{{ data.dis_val }}</span><span
+                                    class="ms-2 fs-14">Rs{{ data.sp }}</span>
+                            </p>
+                            <p class="mt-2">
+                                <span>
+                                    <span class="px-2 fs-13">Qty</span>
+                                    <input type="text" class="mx-1 w-25 px-4 qty-input" /><a
+                                        class="mx-2 px-3 add-btn">ADD</a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 " *ngIf="productList.length ==0">
+                <div class="alert alert-warning" role="alert">
+                    <h4 class="alert-heading" text-center> No Result Found</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

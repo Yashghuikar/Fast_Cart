@@ -1,0 +1,21 @@
+.list-group {
+  display: none;
+  position: absolute;
+}
+.nav-item:hover .list-group {
+  display: block;
+}
+
+.nav-link {
+  font-size: 18px !important;
+  color: black;
+}
+
+.img {
+  height: 500px;
+  width: 850px;
+}
+.imgg {
+  height: 250px;
+  width: 400px;
+}

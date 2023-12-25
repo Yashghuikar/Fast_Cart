@@ -1,0 +1,93 @@
+<div class="container-fluid-lg">
+    <div class="p-0 mb-2 bg-success text-white border">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <p class="text-center mt-2">Some Text</p>
+            </div>
+            <div class="col-md-6 mt-2">
+                <marquee [scrollAmount]="3">This text will scroll from right to left</marquee>
+
+            </div>
+            <div class="col-md-3">
+                <nav class="nav px-5">
+                    <a class="nav-link mx-2 text-white" aria-current="page" href="#">Active</a>
+                    <span class="p-2">|</span>
+                    <a class="nav-link mx-2 text-white" href="#">Disabled</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-2 p-1 d-flex justify-content-between">
+    <div class="">
+        <h3>FastCart</h3>
+    </div>
+    <div class="row  ">
+        <div class="col-md-4">
+            <div class="input-group mb-3 input-group-lg">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" />
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="input-group mb-3 input-group-lg">
+                <input type="text" class="form-control" placeholder="Search location" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary bg-warning text-white" type="button" id="button-addon2"><i
+                        class="bi bi-search"></i></button>
+            </div>
+
+        </div>
+    </div>
+    <div class="cart-section">
+        <ul class="nav d-flex justify-content-around">
+            <li class="nav-item">
+                <i class="bi bi-balloon-heart-fill"></i>
+            </li>
+            <span class="p-1">|</span>
+            <li class="nav-item">
+                <i class="bi bi-telephone-outbound"></i>
+            </li>
+            <span class="p-1">|</span>
+
+            <li class="nav-item">
+                <i class="bi bi-cart"></i>
+            </li>
+            <span class="p-1">|</span>
+
+            <li class="nav-item">
+                <i class="bi bi-person"></i>
+                <ul class="list-group courser">
+                    <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign-up <i
+                            class="bi bi-person-plus ms-2"></i> </li>
+                    <li class="list-group-item">Sign-In <i class="bi bi-person-check ms-3"></i>
+                    </li>
+                    <li class="list-group-item">My profile <i class="bi bi-person-gear ms-1"></i></li>
+
+                </ul>
+            </li>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <app-sign-in></app-sign-in>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>
