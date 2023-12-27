@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpService } from 'src/app/core/services/http.service';
+import { LoginService } from '../../service/login.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -10,10 +11,14 @@ import { HttpService } from 'src/app/core/services/http.service';
 export class SignInComponent implements OnInit {
   @Output() emitAction: EventEmitter<string> = new EventEmitter();
 
-  constructor(private fb: FormBuilder, private http: HttpService) {}
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpService,
+    private log: LoginService
+  ) {}
 
   signInForm!: FormGroup;
-  isLoggedIn: boolean = true;
+  isLoggedIn: boolean = false;
 
   signUp() {
     this.emitAction.emit('Sign-Up');
@@ -41,11 +46,15 @@ export class SignInComponent implements OnInit {
       (res: any) => {
         if (res && res.length > 0) {
           this.isLoggedIn = false;
+          this.emitAction.emit('LOGIN_SUCCESS');
+
+          this.log.addUser(res[0]);
+          alert('LOGIN SUCCESS');
         } else {
           this.isLoggedIn = true;
         }
       },
-      () => {},
+      (error) => {},
       () => {}
     );
   }

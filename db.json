@@ -302,7 +302,14 @@
         "is_new": false,
         "pack_desc": "",
         "p_type": "veg",
-        "combo_skus": [1209671, 1209673, 1209674, 1209675, 1209677, 1209663],
+        "combo_skus": [
+          1209671,
+          1209673,
+          1209674,
+          1209675,
+          1209677,
+          1209663
+        ],
         "attrs": {},
         "store_ids": [],
         "llc_s": "type=pc&slug=cucumber-capsicum",
@@ -653,7 +660,10 @@
         "is_new": false,
         "pack_desc": "",
         "p_type": "veg",
-        "combo_skus": [1202153, 1209663],
+        "combo_skus": [
+          1202153,
+          1209663
+        ],
         "attrs": {},
         "store_ids": [],
         "llc_s": "type=pc&slug=root-vegetables",
@@ -746,7 +756,10 @@
         "is_new": false,
         "pack_desc": "(approx. 400 to 600 g)",
         "p_type": "veg",
-        "combo_skus": [1209664, 1209679],
+        "combo_skus": [
+          1209664,
+          1209679
+        ],
         "attrs": {},
         "store_ids": [],
         "llc_s": "type=pc&slug=cabbage-cauliflower",
@@ -1085,7 +1098,12 @@
         "is_new": false,
         "pack_desc": "",
         "p_type": "veg",
-        "combo_skus": [1202817, 1222458, 1209661, 1209662],
+        "combo_skus": [
+          1202817,
+          1222458,
+          1209661,
+          1209662
+        ],
         "attrs": {},
         "store_ids": [],
         "llc_s": "type=pc&slug=indian-exotic-herbs",
@@ -1430,7 +1448,14 @@
         "is_new": false,
         "pack_desc": "",
         "p_type": "veg",
-        "combo_skus": [1209671, 1209673, 1209674, 1209675, 1209677, 1209663],
+        "combo_skus": [
+          1209671,
+          1209673,
+          1209674,
+          1209675,
+          1209677,
+          1209663
+        ],
         "attrs": {},
         "store_ids": [],
         "llc_s": "type=pc&slug=beans-brinjals-okra",
@@ -1915,7 +1940,9 @@
         "is_new": false,
         "pack_desc": "",
         "p_type": "veg",
-        "combo_skus": [1200045],
+        "combo_skus": [
+          1200045
+        ],
         "attrs": {},
         "store_ids": [],
         "llc_s": "type=pc&slug=potato-onion-tomato",
@@ -2192,7 +2219,9 @@
         "is_new": false,
         "pack_desc": "",
         "p_type": "veg",
-        "combo_skus": [1200045],
+        "combo_skus": [
+          1200045
+        ],
         "attrs": {},
         "store_ids": [],
         "llc_s": "type=pc&slug=potato-onion-tomato",
@@ -3410,7 +3439,9 @@
         "is_new": false,
         "pack_desc": "Pouch",
         "p_type": "veg",
-        "combo_skus": [1214917],
+        "combo_skus": [
+          1214917
+        ],
         "attrs": {},
         "store_ids": [],
         "llc_s": "type=pc&slug=salts",
@@ -4324,10 +4355,20 @@
             "search_term": [],
             "cats": [
               {
-                "cat": ["Milk", "milk", "/pc/bakery-cakes-dairy/dairy/milk/", 0]
+                "cat": [
+                  "Milk",
+                  "milk",
+                  "/pc/bakery-cakes-dairy/dairy/milk/",
+                  0
+                ]
               },
               {
-                "cat": ["Curd", "curd", "/pc/bakery-cakes-dairy/dairy/curd/", 0]
+                "cat": [
+                  "Curd",
+                  "curd",
+                  "/pc/bakery-cakes-dairy/dairy/curd/",
+                  0
+                ]
               },
               {
                 "cat": [
@@ -4770,7 +4811,12 @@
                 ]
               }
             ],
-            "sub_category": ["Water", "water", "/pc/beverages/water/", 0]
+            "sub_category": [
+              "Water",
+              "water",
+              "/pc/beverages/water/",
+              0
+            ]
           },
           {
             "search_term": [],
@@ -4859,7 +4905,12 @@
                 ]
               }
             ],
-            "sub_category": ["Tea", "tea", "/pc/beverages/tea/", 0]
+            "sub_category": [
+              "Tea",
+              "tea",
+              "/pc/beverages/tea/",
+              0
+            ]
           },
           {
             "search_term": [],
@@ -4881,7 +4932,12 @@
                 ]
               }
             ],
-            "sub_category": ["Coffee", "coffee", "/pc/beverages/coffee/", 0]
+            "sub_category": [
+              "Coffee",
+              "coffee",
+              "/pc/beverages/coffee/",
+              0
+            ]
           },
           {
             "search_term": [],
@@ -6127,16 +6183,36 @@
             "search_term": [],
             "cats": [
               {
-                "cat": ["Nails", "nails", "/pc/beauty-hygiene/makeup/nails/", 0]
+                "cat": [
+                  "Nails",
+                  "nails",
+                  "/pc/beauty-hygiene/makeup/nails/",
+                  0
+                ]
               },
               {
-                "cat": ["Face", "face", "/pc/beauty-hygiene/makeup/face/", 0]
+                "cat": [
+                  "Face",
+                  "face",
+                  "/pc/beauty-hygiene/makeup/face/",
+                  0
+                ]
               },
               {
-                "cat": ["Lips", "lips", "/pc/beauty-hygiene/makeup/lips/", 0]
+                "cat": [
+                  "Lips",
+                  "lips",
+                  "/pc/beauty-hygiene/makeup/lips/",
+                  0
+                ]
               },
               {
-                "cat": ["Eyes", "eyes", "/pc/beauty-hygiene/makeup/eyes/", 0]
+                "cat": [
+                  "Eyes",
+                  "eyes",
+                  "/pc/beauty-hygiene/makeup/eyes/",
+                  0
+                ]
               },
               {
                 "cat": [
@@ -7526,7 +7602,12 @@
                 ]
               }
             ],
-            "sub_category": ["Eggs", "eggs", "/pc/eggs-meat-fish/eggs/", 0]
+            "sub_category": [
+              "Eggs",
+              "eggs",
+              "/pc/eggs-meat-fish/eggs/",
+              0
+            ]
           },
           {
             "search_term": [],
@@ -9056,7 +9137,12 @@
                   "pack_desc": "",
                   "p_type": "veg",
                   "combo_skus": [
-                    1209671, 1209673, 1209674, 1209675, 1209677, 1209663
+                    1209671,
+                    1209673,
+                    1209674,
+                    1209675,
+                    1209677,
+                    1209663
                   ],
                   "attrs": {},
                   "store_ids": [],
@@ -9408,7 +9494,10 @@
                   "is_new": false,
                   "pack_desc": "",
                   "p_type": "veg",
-                  "combo_skus": [1202153, 1209663],
+                  "combo_skus": [
+                    1202153,
+                    1209663
+                  ],
                   "attrs": {},
                   "store_ids": [],
                   "llc_s": "type=pc&slug=root-vegetables",
@@ -9754,7 +9843,12 @@
                   "pack_desc": "",
                   "p_type": "veg",
                   "combo_skus": [
-                    1209671, 1209673, 1209674, 1209675, 1209677, 1209663
+                    1209671,
+                    1209673,
+                    1209674,
+                    1209675,
+                    1209677,
+                    1209663
                   ],
                   "attrs": {},
                   "store_ids": [],
@@ -10240,7 +10334,9 @@
                   "is_new": false,
                   "pack_desc": "",
                   "p_type": "veg",
-                  "combo_skus": [1200045],
+                  "combo_skus": [
+                    1200045
+                  ],
                   "attrs": {},
                   "store_ids": [],
                   "llc_s": "type=pc&slug=potato-onion-tomato",
@@ -10517,7 +10613,9 @@
                   "is_new": false,
                   "pack_desc": "",
                   "p_type": "veg",
-                  "combo_skus": [1200045],
+                  "combo_skus": [
+                    1200045
+                  ],
                   "attrs": {},
                   "store_ids": [],
                   "llc_s": "type=pc&slug=potato-onion-tomato",
@@ -11474,7 +11572,12 @@
                 "pack_desc": "",
                 "p_type": "veg",
                 "combo_skus": [
-                  1209671, 1209673, 1209674, 1209675, 1209677, 1209663
+                  1209671,
+                  1209673,
+                  1209674,
+                  1209675,
+                  1209677,
+                  1209663
                 ],
                 "attrs": {},
                 "store_ids": [],
@@ -11826,7 +11929,10 @@
                 "is_new": false,
                 "pack_desc": "",
                 "p_type": "veg",
-                "combo_skus": [1202153, 1209663],
+                "combo_skus": [
+                  1202153,
+                  1209663
+                ],
                 "attrs": {},
                 "store_ids": [],
                 "llc_s": "type=pc&slug=root-vegetables",
@@ -12172,7 +12278,12 @@
                 "pack_desc": "",
                 "p_type": "veg",
                 "combo_skus": [
-                  1209671, 1209673, 1209674, 1209675, 1209677, 1209663
+                  1209671,
+                  1209673,
+                  1209674,
+                  1209675,
+                  1209677,
+                  1209663
                 ],
                 "attrs": {},
                 "store_ids": [],
@@ -12658,7 +12769,9 @@
                 "is_new": false,
                 "pack_desc": "",
                 "p_type": "veg",
-                "combo_skus": [1200045],
+                "combo_skus": [
+                  1200045
+                ],
                 "attrs": {},
                 "store_ids": [],
                 "llc_s": "type=pc&slug=potato-onion-tomato",
@@ -12935,7 +13048,9 @@
                 "is_new": false,
                 "pack_desc": "",
                 "p_type": "veg",
-                "combo_skus": [1200045],
+                "combo_skus": [
+                  1200045
+                ],
                 "attrs": {},
                 "store_ids": [],
                 "llc_s": "type=pc&slug=potato-onion-tomato",
@@ -13708,22 +13823,13 @@
   ],
   "users": [
     {
-      "name": "Akshay Ghuikar",
-      "mobileNo": "8551073372",
-      "email": "akshayghuikar28@gmail.com",
-      "password": "1122",
-      "otpentered": "182817",
+      "fullName": "yash ghuikar",
+      "emailAddress": "yash@gmail.com",
+      "mobile": "7477774747",
+      "password": "yash",
+      "otpEntered": "608469",
       "otpVerified": true,
       "id": 1
-    },
-    {
-      "name": "yash",
-      "mobileNo": "8551073372",
-      "email": "yash",
-      "password": "123",
-      "otpentered": "124106",
-      "otpVerified": true,
-      "id": 2
     }
   ]
 }

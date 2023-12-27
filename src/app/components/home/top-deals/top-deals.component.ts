@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HttpService } from 'src/app/core/services/http.service';
+import { CartService } from 'src/app/shared/service/cart.service';
 
 @Component({
   selector: 'app-top-deals',
@@ -34,7 +35,7 @@ export class TopDealsComponent implements OnInit {
     },
     nav: true,
   };
-  constructor(private http: HttpService) {}
+  constructor(private http: HttpService, private cart: CartService) {}
 
   ngOnInit(): void {
     this.topDeals();
@@ -42,8 +43,15 @@ export class TopDealsComponent implements OnInit {
   topDeals() {
     this.http.getDataFromServer('top-deals').subscribe(
       (res: any) => {
-        this.topDealsLists = res.products;
-        console.log('top-deals', this.topDealsLists);
+        if (res && res.products && res.products.length > 0) {
+          this.topDealsLists = res.products;
+
+          this.topDealsLists.forEach((el: any) => {
+            el['quantity'] = 0;
+          });
+
+          console.log('top-deals', this.topDealsLists);
+        }
       },
       (error: any) => {},
       () => {}
@@ -55,4 +63,27 @@ export class TopDealsComponent implements OnInit {
     this.topDealsLists[index].sp = item.sp;
     this.topDealsLists[index].dis_val = item.dis_val;
   }
+
+  addToCart(productObj: any) {
+    if (productObj.quantity != 0) {
+      let product = new Product();
+      product.productName = productObj.llc_n;
+      product.selectedWeight = productObj.w;
+      product.quantity = productObj.quantity;
+      product.price = productObj.sp;
+      product.totalPrice = productObj.sp * productObj.quantity;
+      this.cart.addItemToCart(product);
+    } else {
+      alert('Please select the Quantity');
+    }
+  }
+}
+
+class Product {
+  productName!: string;
+  price!: number;
+  quantity!: number;
+  totalPrice!: number;
+  discount!: number;
+  selectedWeight!: string;
 }

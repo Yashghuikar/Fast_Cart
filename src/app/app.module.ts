@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ProductByCategoryComponent } from './components/product-by-category/product-by-category.component';
+import { MyOrdersComponent } from './components/my-orders/my-orders.component';
+import { MyAccountComponent } from './components/my-account/my-account.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,8 @@ import { ProductByCategoryComponent } from './components/product-by-category/pro
     NavbarComponent,
     TopDealsComponent,
     ProductByCategoryComponent,
+    MyOrdersComponent,
+    MyAccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,9 @@ import { ProductByCategoryComponent } from './components/product-by-category/pro
     SharedModule,
     CoreModule,
     HttpClientModule,
+    FormsModule,
   ],
+
   providers: [],
   bootstrap: [AppComponent],
 })
