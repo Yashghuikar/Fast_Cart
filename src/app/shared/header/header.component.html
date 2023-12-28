@@ -21,7 +21,7 @@
 
 <div class="container mt-2 p-1 d-flex justify-content-between">
     <div class="">
-        <h3>FastCart</h3>
+        <h3 class="courser" routerLink="/home">FastCart</h3>
     </div>
     <div class="row  ">
         <div class="col-md-4">
@@ -43,16 +43,16 @@
     </div>
     <div class="cart-section">
         <ul class="nav d-flex justify-content-around">
-            <li class="nav-item">
+            <li class="nav-item courser">
                 <i class="bi bi-balloon-heart-fill"></i>
             </li>
             <span class="p-1">|</span>
-            <li class="nav-item">
+            <li class="nav-item courser">
                 <i class="bi bi-telephone-outbound"></i>
             </li>
             <span class="p-1">|</span>
 
-            <li class="nav-item">
+            <li class="nav-item courser" routerLink="/cart">
                 <i class="bi bi-cart"></i>
 
                 <span class="position-absolute   translate-middle badge rounded-pill bg-danger">
@@ -64,7 +64,7 @@
             </li>
             <span class="p-1">|</span>
 
-            <li class="nav-item " *ngIf="actionName != 'LOGIN_SUCCESS'">
+            <li class="nav-item courser " *ngIf="actionName != 'LOGIN_SUCCESS'">
                 <i class="bi bi-person "></i>
                 <ul class="list-group courser">
                     <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -73,7 +73,7 @@
                     <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         (click)="triggerAction('Sign-Up')">Sign-up <i class="bi bi-person-plus ms-2"></i> </li>
 
-                    <li class="list-group-item">My profile <i class="bi bi-person-gear ms-1"></i></li>
+                    <!-- <li class="list-group-item">My profile <i class="bi bi-person-gear ms-1"></i></li> -->
 
                 </ul>
             </li>

@@ -47,7 +47,7 @@ export class TopDealsComponent implements OnInit {
           this.topDealsLists = res.products;
 
           this.topDealsLists.forEach((el: any) => {
-            el['quantity'] = 0;
+            el['quantity'] = null;
           });
 
           console.log('top-deals', this.topDealsLists);
@@ -71,7 +71,9 @@ export class TopDealsComponent implements OnInit {
       product.selectedWeight = productObj.w;
       product.quantity = productObj.quantity;
       product.price = productObj.sp;
+      product.img = productObj.p_img_url;
       product.totalPrice = productObj.sp * productObj.quantity;
+      product.discount = productObj.dis_val;
       this.cart.addItemToCart(product);
     } else {
       alert('Please select the Quantity');
@@ -79,11 +81,12 @@ export class TopDealsComponent implements OnInit {
   }
 }
 
-class Product {
+export class Product {
   productName!: string;
   price!: number;
   quantity!: number;
   totalPrice!: number;
   discount!: number;
   selectedWeight!: string;
+  img!: string;
 }

@@ -38,7 +38,7 @@
         </div>
         <div class="col-md-8">
             <div class="row mt-2 ">
-                <div class="col-md-4 mb-2" *ngFor="let data of productList">
+                <div class="col-md-4 mb-2" *ngFor="let data of productList ; let i =index">
                     <div class="card shadow=sm mx-2" style="width: 15rem">
                         <img [src]="data.p_img_url" class="card-img-top p-3" alt="..." />
                         <div class="card-body">
@@ -64,8 +64,9 @@
                             <p class="mt-2">
                                 <span>
                                     <span class="px-2 fs-13">Qty</span>
-                                    <input type="text" class="mx-1 w-25 px-4 qty-input" /><a
-                                        class="mx-2 px-3 add-btn">ADD</a>
+                                    <input type="text" class="mx-1 w-25 px-2   qty-input rounded-1" name="qua{{i}}"
+                                        [(ngModel)]="data.quantity" /><a class="mx-2 cursor bordet  px-3 add-btn"
+                                        (click)="addToCart(data)">ADD</a>
                                 </span>
                             </p>
                         </div>

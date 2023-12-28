@@ -1,0 +1,46 @@
+<div class="container">
+    <h3 class="text-center">Basket</h3>
+    <div class="p-4 mb-2 bg-black shadow-sm rounded-2 text-white clearfix   ">
+        <div class="float-start ms-2">
+            <p class="  mb-0"> Subtotal ({{orderObj.totalItems}} item): ₹ {{orderObj.finalPrice}}.00</p>
+            <p class=" pt-0 text-success mt-0"> Savings: ₹ 74.00</p>
+
+        </div>
+        <div class="float-end"><button type="button" class="btn btn-primary btn-sm mt-3 px-5" routerLink="/place-order"
+                (click)="checkOut()">
+                Checkout </button>
+        </div>
+    </div>
+
+    <h6 class="mt-3">Fruits & Vegetables</h6>
+
+    <div class="d-flex flex-row mb-3 mt-2  border shadow-sm justify-content-around"
+        *ngFor="let item of carData; let i=index">
+
+        <div class="p-2 shadow m-3">
+            <img [src]=" item.img" height="100">
+        </div>
+
+        <div class="p-2 mt-5">
+            <span class="d-block font">{{item.productName }}</span>
+            <span class="d-block   ">{{item.price }}</span>
+
+
+        </div>
+        <div class="p-2 mt-5">
+
+            <span><i class="bi bi-dash-circle me-2 courser jj" (click)="changeAction('decrease', i)"></i></span>
+            <!-- <span class="fs-6"> {{item.quantity}}</span> -->
+            {{item.quantity}}
+            <span><i class="bi bi-plus-circle ms-2 courser" (click)="changeAction('increase', i)"></i></span>
+
+
+        </div>
+        <div class="p-2 mt-4">
+            <span class="d-block font mt-4 fs-6"> ₹{{item.totalPrice }}</span>
+
+        </div>
+
+
+
+    </div>

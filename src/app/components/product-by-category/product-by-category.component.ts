@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../core/services/http.service';
+import { CartService } from 'src/app/shared/service/cart.service';
+import { Product } from '../home/top-deals/top-deals.component';
 
 @Component({
   selector: 'app-product-by-category',
@@ -7,7 +9,7 @@ import { HttpService } from '../../core/services/http.service';
   styleUrls: ['./product-by-category.component.scss'],
 })
 export class ProductByCategoryComponent implements OnInit {
-  constructor(private http: HttpService) {}
+  constructor(private http: HttpService, private cart: CartService) {}
   categoryList: any = [];
   productList: any = [];
   selectedCategory: string = '';
@@ -41,6 +43,9 @@ export class ProductByCategoryComponent implements OnInit {
           res[0].products.length > 0
         ) {
           this.productList = res[0].products[0].product_info.reco_list.products;
+          this.productList.forEach((el: any) => {
+            el['quantity'] = 0;
+          });
           console.log('inside items', this.productList);
         } else {
           this.productList = [];
@@ -50,4 +55,28 @@ export class ProductByCategoryComponent implements OnInit {
       () => {}
     );
   }
+
+  addToCart(productObj: any) {
+    if (productObj.quantity != 0) {
+      let product = new Product();
+      product.productName = productObj.llc_n;
+      product.selectedWeight = productObj.w;
+      product.quantity = productObj.quantity;
+      product.price = productObj.sp;
+      product.img = productObj.p_img_url;
+      product.totalPrice = productObj.sp * productObj.quantity;
+      this.cart.addItemToCart(product);
+    } else {
+      alert('Please select the Quantity');
+    }
+  }
 }
+
+// export class Product {
+//   productName!: string;
+//   price!: number;
+//   quantity!: number;
+//   totalPrice!: number;
+//   discount!: number;
+//   selectedWeight!: string;
+// }

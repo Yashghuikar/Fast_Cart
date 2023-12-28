@@ -15,6 +15,8 @@ import { ProductByCategoryComponent } from './components/product-by-category/pro
 import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
 import { FormsModule } from '@angular/forms';
+import { CartComponent } from './components/cart/cart.component';
+import { FinalOrderComponent } from './final-order/final-order.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { FormsModule } from '@angular/forms';
     ProductByCategoryComponent,
     MyOrdersComponent,
     MyAccountComponent,
+    CartComponent,
+    FinalOrderComponent,
   ],
   imports: [
     BrowserModule,

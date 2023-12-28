@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { LoginService } from '../service/login.service';
 import { Observable } from 'rxjs';
 import { SharedService } from '../service/shared.service';
+import { CartService } from '../service/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,11 @@ export class HeaderComponent implements OnInit {
   actionName: string = '';
   userDeatilsObj: any;
 
-  constructor(private log: LoginService, private shared: SharedService) {}
+  constructor(
+    private log: LoginService,
+    private shared: SharedService,
+    private cart: CartService
+  ) {}
 
   triggerAction(action: string) {
     this.actionName = action;
@@ -28,6 +33,11 @@ export class HeaderComponent implements OnInit {
     if (userInfo != null) {
       this.userDeatilsObj = userInfo;
       this.actionName === 'LOGIN_SUCCESS';
+    }
+
+    const data = this.cart.getCartData();
+    if (data && data.length > 0) {
+      this.shared.emitCardCount(data.length);
     }
   }
 

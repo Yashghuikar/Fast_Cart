@@ -14,4 +14,14 @@ export class CartService {
     this.shared.emitCardCount(this.cartArr.length);
     console.log('--------------------', this.cartArr.length);
   }
+
+  getCartData() {
+    // var cartItems = [];
+    let cartData = localStorage.getItem('cartItems');
+
+    if (cartData) {
+      let cartItems = JSON.parse(cartData);
+      return cartItems;
+    }
+  }
 }
