@@ -14,6 +14,8 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     const product = this.cart.getCartData();
+    console.log('102101021', product);
+
     if (product && product.length > 0) {
       this.carData = product;
       console.log('kjbkkjbjkkbjknkj', this.carData);

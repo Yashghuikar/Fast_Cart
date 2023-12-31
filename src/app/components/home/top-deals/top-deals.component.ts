@@ -75,6 +75,7 @@ export class TopDealsComponent implements OnInit {
       product.totalPrice = productObj.sp * productObj.quantity;
       product.discount = productObj.dis_val;
       this.cart.addItemToCart(product);
+      alert('Item added to cart.');
     } else {
       alert('Please select the Quantity');
     }

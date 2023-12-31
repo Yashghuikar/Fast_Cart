@@ -40,6 +40,7 @@ import { FinalOrderComponent } from './final-order/final-order.component';
     HttpClientModule,
     FormsModule,
   ],
+  // exports: [FormsModule],
 
   providers: [],
   bootstrap: [AppComponent],

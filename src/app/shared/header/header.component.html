@@ -33,8 +33,8 @@
         </div>
         <div class="col-md-8">
             <div class="input-group mb-3 input-group-lg">
-                <input type="text" class="form-control" placeholder="Search location" aria-label="Recipient's username"
-                    aria-describedby="button-addon2">
+                <input type="text" class="form-control" placeholder="Search Product" [(ngModel)]="searchParam"
+                    (ngModelChange)="searchProduct()">
                 <button class="btn btn-outline-secondary bg-warning text-white" type="button" id="button-addon2"><i
                         class="bi bi-search"></i></button>
             </div>
