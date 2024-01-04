@@ -1,0 +1,19 @@
+<div class="alert alert-danger" role="alert" *ngIf="isLoggedIn">
+    User doesn't Exist Please Register!!
+</div>
+<form [formGroup]="signInForm" (ngSubmit)="login()">
+    <div class="mb-3">
+        <label for="id1" class="form-label">Email address</label>
+        <input type="yex" class="form-control" id="id1" formControlName="email">
+
+    </div>
+    <div class="mb-3">
+        <label for="id2" class="form-label">Password</label>
+        <input type="password" class="form-control" id="id2" formControlName="password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button class="btn btn-primary ms-3" (click)="signUp()">Sign Up</button>
+
+
+</form>

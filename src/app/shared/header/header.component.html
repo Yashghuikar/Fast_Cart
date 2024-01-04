@@ -1,0 +1,116 @@
+<div class="container-fluid-lg">
+    <div class="p-0 mb-2 bg-success text-white border">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <p class="text-center mt-2">Some Text</p>
+            </div>
+            <div class="col-md-6 mt-2">
+                <marquee [scrollAmount]="3">This text will scroll from right to left</marquee>
+
+            </div>
+            <div class="col-md-3">
+                <nav class="nav px-5">
+                    <a class="nav-link mx-2 text-white" aria-current="page" href="#">Active</a>
+                    <span class="p-2">|</span>
+                    <a class="nav-link mx-2 text-white" href="#">Disabled</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-2 p-1 d-flex justify-content-between">
+    <div class="">
+        <h3 class="courser" routerLink="/home">FastCart</h3>
+    </div>
+    <div class="row  ">
+        <div class="col-md-4">
+            <div class="input-group mb-3 input-group-lg">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" />
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="input-group mb-3 input-group-lg">
+                <input type="text" class="form-control" placeholder="Search Product" [(ngModel)]="searchParam"
+                    (ngModelChange)="searchProduct()">
+                <button class="btn btn-outline-secondary bg-warning text-white" type="button" id="button-addon2"><i
+                        class="bi bi-search"></i></button>
+            </div>
+
+        </div>
+    </div>
+    <div class="cart-section">
+        <ul class="nav d-flex justify-content-around">
+            <li class="nav-item courser">
+                <i class="bi bi-balloon-heart-fill"></i>
+            </li>
+            <span class="p-1">|</span>
+            <li class="nav-item courser">
+                <i class="bi bi-telephone-outbound"></i>
+            </li>
+            <span class="p-1">|</span>
+
+            <li class="nav-item courser" routerLink="/cart">
+                <i class="bi bi-cart"></i>
+
+                <span class="position-absolute   translate-middle badge rounded-pill bg-danger">
+                    {{cartCountObj | async }}
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+
+
+            </li>
+            <span class="p-1">|</span>
+
+            <li class="nav-item courser " *ngIf="actionName != 'LOGIN_SUCCESS'">
+                <i class="bi bi-person "></i>
+                <ul class="list-group courser">
+                    <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        (click)="triggerAction('Sign-In')">Sign-In <i class="bi bi-person-check ms-2"></i>
+                    </li>
+                    <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        (click)="triggerAction('Sign-Up')">Sign-up <i class="bi bi-person-plus ms-2"></i> </li>
+
+                    <!-- <li class="list-group-item">My profile <i class="bi bi-person-gear ms-1"></i></li> -->
+
+                </ul>
+            </li>
+            <div class="dropdown mb-2" *ngIf="actionName == 'LOGIN_SUCCESS'">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{userDeatilsObj.fullName}}
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item">My Orders</a></li>
+                    <li><a class="dropdown-item" routerLink="/my-account">My Account</a></li>
+                    <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+                </ul>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-4" id="exampleModalLabel" *ngIf="actionName=='Sign-In'">Sign-In
+                            </h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" *ngIf="actionName=='Sign-Up'">Sign-Up
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                #closeBtn></button>
+                        </div>
+                        <div class="modal-body">
+                            <app-sign-in *ngIf="actionName=='Sign-In'" (emitAction)="getData($event)"></app-sign-in>
+                            <app-sign-up *ngIf="actionName=='Sign-Up'" (actionEmit)="getRes($event)"></app-sign-up>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>
